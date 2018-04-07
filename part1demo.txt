@@ -1,0 +1,13 @@
+Script started on Fri Apr  6 20:06:42 2018
+$ bash
+byadav@js-16-68:/home/byadav$ as part1.s -o part1.o
+byadav@js-16-68:/home/byadav$ ls d part1.o -o part1
+byadav@js-16-68:/home/byadav$ ./part1
+$ echo $?
+0
+$ exit
+byadav@js-16-68:/home/byadav$ exit
+exit
+$ exit
+
+Script done on Fri Apr  6 20:08:10 2018
