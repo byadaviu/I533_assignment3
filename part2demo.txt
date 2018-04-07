@@ -1,0 +1,38 @@
+Script started on Fri Apr  6 21:12:37 2018
+$ bash
+byadav@js-16-68:/home/byadav$ as part2.s -o part2.o
+byadav@js-16-68:/home/byadav$ ld part2.o -o part2
+byadav@js-16-68:/home/byadav$ ./part2
+$ echo $?
+0
+$ exit
+byadav@js-16-68:/home/byadav$ objdump -d part2
+
+part2:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000400078 <_start>:
+  400078:	48 bb 2f 62 69 6e 2f 	movabs $0x2268732f6e69622f,%rbx
+  40007f:	73 68 22 
+  400082:	48 c1 e3 08          	shl    $0x8,%rbx
+  400086:	48 c1 eb 08          	shr    $0x8,%rbx
+  40008a:	53                   	push   %rbx
+  40008b:	48 c7 c0 3b 22 22 22 	mov    $0x2222223b,%rax
+  400092:	48 c1 e0 38          	shl    $0x38,%rax
+  400096:	48 c1 e8 38          	shr    $0x38,%rax
+  40009a:	48 89 e7             	mov    %rsp,%rdi
+  40009d:	48 31 f6             	xor    %rsi,%rsi
+  4000a0:	48 31 d2             	xor    %rdx,%rdx
+  4000a3:	0f 05                	syscall 
+  4000a5:	48 c7 c0 3c 22 22 22 	mov    $0x2222223c,%rax
+  4000ac:	48 c1 e0 38          	shl    $0x38,%rax
+  4000b0:	48 c1 e8 38          	shr    $0x38,%rax
+  4000b4:	48 31 ff             	xor    %rdi,%rdi
+  4000b7:	0f 05                	syscall 
+byadav@js-16-68:/home/byadav$ exit
+exit
+$ exit
+
+Script done on Fri Apr  6 21:15:06 2018
